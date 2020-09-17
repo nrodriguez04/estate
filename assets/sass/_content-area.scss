@@ -1,0 +1,361 @@
+
+#content-area {
+    overflow: auto;
+    width: 100%;
+    min-height: 100vh;
+}
+
+#filter {
+    background: $gray;
+    width: 20%;
+    margin: 35px;
+    display: inline-block;
+    -webkit-box-shadow: 0px 26px 19px 0px rgba(176,174,176,0.5);
+    -moz-box-shadow: 0px 26px 19px 0px rgba(176,174,176,0.5);
+    box-shadow: 0px 26px 19px 0px rgba(176,174,176,0.5);
+
+    .inside{
+        padding: 20px;
+        max-width: 300px;
+        height: 100vh;
+    }
+
+    h4 {
+        font-size: 0.9rem;
+        margin-bottom: 25px;
+        text-transform: uppercase;
+        font-weight: 500px;
+        color: $darkblue;
+    }
+
+    select {
+        background: transparent;
+        padding: 10px;
+        font-size: 14px;
+        font-weight: 500;
+        color: #1b1b1b;
+        display: block;
+        margin-bottom: 25px;
+        width: 100%;
+    }
+
+    .filters {
+        .title {
+            font-size: 0.9rem;
+            display: block;
+            margin-bottom: 1rem;
+            color: $darkblue;
+        }
+
+        input[type="text"] {
+            border-radius: 5px;
+            font-size: 1rem;
+            padding: .4rem;
+            width: 45%;
+            display: inline-block;
+            margin-right: 2.5%;
+            margin-bottom: 1rem;
+        }
+
+        &.features {
+            label {
+                display: block;
+                width: 100%;
+                padding: 10px 0;
+
+                input[type="checkbox"] {
+                    float: right;
+                }
+            }
+        }
+    }
+
+}
+
+
+#listings {
+    width: 70%;
+    height: 100vh;
+    display: inline-block;
+    vertical-align: top;
+    padding: 15px;
+    background: rgb(255, 255, 255);
+
+    .search-area {
+        input[type="text"]{
+            width: 70%;
+            background: transparent;
+            font-size: 1rem;
+            padding: 10px;
+            border: none;
+            border-bottom: 2px solid $maroon;
+            border-left: 2px solid $maroon;
+            margin-bottom: 20px;
+            color: $darkblue;
+            outline: none !important;
+
+            &:hover{
+                outline: none !important;
+            }
+            
+        }
+    }
+
+    .sortby-area {
+        margin-bottom: 20px;
+        .results {
+            color: $maroon;
+            font-size: 0.8rem;
+            display: inline-block;
+        }
+        .sort-options {
+            float: right;
+
+            select {
+                font-size: 0.9rem;
+                font-weight: 300;
+                border: 1px solid $lightgray;
+                background: white;
+                padding: 8px;
+                display: inline-block;
+                margin-right: 15px;
+                margin-bottom: 20px;
+                vertical-align: top;
+            }
+
+            .view {
+                display: inline-block;
+                margin-top: 10px;
+
+                .fa{
+                    margin-right: 15px;
+                    font-size: 1.5rem;
+                }
+            }
+        }
+    }
+
+    .listings-results {
+        margin-bottom: 60px;
+        padding: 35px;
+        padding-bottom: 20px;
+
+
+        .listing {
+            background: #fff;
+            border-radius: 5px;
+            -webkit-box-shadow: 0px 26px 19px 0px rgba(176,174,176,1);
+            -moz-box-shadow: 0px 26px 19px 0px rgba(176,174,176,1);
+            box-shadow: 0px 26px 19px 0px rgba(176,174,176,1);
+        }
+
+        .listing-img {
+            color: white;
+            padding: 15px;
+            position: relative;
+            background: url(https://freshome.com/wp-content/uploads/2018/09/contemporary-exterior.jpg) no-repeat center center; 
+            -webkit-background-size: cover;
+            -moz-background-size: cover;
+            -o-background-size: cover;
+            background-size: cover;
+            min-height: 200px;
+            -webkit-border-top-left-radius: 5px;
+            -webkit-border-top-right-radius: 5px;
+            -moz-border-radius-topleft: 5px;
+            -moz-border-radius-topright: 5px;
+            border-top-left-radius: 5px;
+            border-top-right-radius: 5px;
+
+            &:hover {
+                .details {
+                    opacity: 1;
+                }
+
+                .address {
+                    opacity: 0;
+                }
+            }
+
+            .address {
+                position: absolute;
+                font-size: 0.9rem;
+                text-transform: capitalize;
+                bottom: 5px;
+                padding: 3px;
+                color: white;
+                opacity: 1;
+                transition: all 0.3s ease-in-out;
+                text-shadow: 4px 3px 3px rgba(150, 150, 150, 1);
+            }
+            
+
+            .details {
+                transition: all 0.3s ease-in-out;
+                opacity: 0;
+                padding: 20px;
+                position: absolute;
+                top: 0;
+                left: 0;
+                bottom: 0;
+                right: 0;
+                -webkit-border-top-left-radius: 5px;
+                -webkit-border-top-right-radius: 5px;
+                -moz-border-radius-topleft: 5px;
+                -moz-border-radius-topright: 5px;
+                border-top-left-radius: 5px;
+                border-top-right-radius: 5px;
+
+                /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#1e5799+0,1e5799+0,2989d8+35,7db9e8+75&0.96+0,1+100 */
+                background: -moz-linear-gradient(top,  rgba(30,87,153,0.8) 0%, rgba(41,137,216,0.97) 35%, rgba(125,185,232,0.8) 75%, rgba(125,185,232,0.8) 100%); /* FF3.6-15 */
+                background: -webkit-linear-gradient(top,  rgba(30,87,153,0.8) 0%,rgba(41,137,216,0.97) 35%,rgba(125,185,232,0.8) 75%,rgba(125,185,232,0.8) 100%); /* Chrome10-25,Safari5.1-6 */
+                background: linear-gradient(to bottom,  rgba(30,87,153,0.8) 0%,rgba(41,137,216,0.97) 35%,rgba(125,185,232,0.8) 75%,rgba(125,185,232,0.8) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+                filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f51e5799', endColorstr='#7db9e8',GradientType=0 ); /* IE6-9 */
+
+                .user-img {
+                    width: 35px;
+                    height: 35px;
+                    border-radius: 50%;
+                    border: 2px solid white;
+                    display: inline-block;
+                    background: url(https://images.pexels.com/photos/1036623/pexels-photo-1036623.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500) no-repeat center center; 
+                    -webkit-background-size: cover;
+                    -moz-background-size: cover;
+                    -o-background-size: cover;
+                    background-size: cover;
+                }
+
+                .user-details {
+                    vertical-align: top;
+                    display: inline-block;
+                    
+
+                    .user-name {
+                        font-weight: 300;
+                        font-size: 0.9rem;
+                        display: block;
+                        color: rgba(255,255,255, 1);
+                        margin-top: 3px;
+                        margin-bottom: 5px;
+                    }
+
+                    .post-date {
+                        font-size: 0.9rem;
+                        display: block;
+                        color: rgba(255,255,255, .7)
+                    }
+                }
+
+                .listing-details {
+                    margin-top: 20px;
+                    margin-bottom: 10px;
+
+                    .fa {
+                        display: inline-block;
+                        font-size: 20px;
+                        margin-right: 15px;
+                    }
+
+                    span {
+                        display: inline-block;
+                        font-size: 0.9rem;
+                        font-weight: 300;
+                        vertical-align: top;
+                        position: relative;
+                        top: 3px;
+                    } 
+
+                    .floor-space {
+                        margin-bottom: 10px;
+                    }
+
+                    .bedrooms {
+
+                        i {
+                            display: inline-block;
+                            font-size: 0.9rem;
+                        }
+                    }
+                }
+            }
+        }  
+    }
+
+    .bottom-info {
+        background: white;
+        padding: 20px 15px;
+        color: rgb(65, 65, 65);
+        margin-bottom: 20px;
+
+        .price {
+            display: block;
+            font-size: 1rem;
+            margin-bottom: 10px;
+        }
+
+        .location {
+            display: block;
+            font-size: 1.2rem;
+        }
+    }
+}
+
+.view-btn {
+    background: $darkblue;
+    padding: 8px;
+    font-size: 0.9rem;
+    border-radius: 5px;
+    text-align: center;
+    max-width: 150px;
+    transition: background 0.3s ease-in-out;
+
+    &:hover {
+        background: $maroon;
+        cursor: pointer;
+    }
+}
+
+#pagination {
+    text-align: center;
+    padding-bottom: 35px;
+
+    .pages {
+        display: inline-block;
+        background: white;
+
+        -webkit-box-shadow: 0px 26px 19px 0px rgba(176,174,176,1);
+        -moz-box-shadow: 0px 26px 19px 0px rgba(176,174,176,1);
+        box-shadow: 0px 26px 19px 0px rgba(176,174,176,1);
+
+        li {
+            display: inline-block;
+            padding: 20px 30px;
+
+            &.active,
+            &:hover {
+                color: $maroon;
+                font-weight: 700;
+                cursor: pointer;
+            }
+        }
+    }
+}   
+
+.col-md-3 {
+    width: 25%;
+    display: inline-block;
+    vertical-align: top;
+    padding: 0 15px;
+}
+
+.col-md-9 {
+    width: 75%;
+    display: inline-block;
+    padding-left: 20px;
+}
+
+.col-lg-6 {
+    width: 50%;
+    display: inline-block;
+    padding-left: 20px;
+    padding: 20px;
+}
